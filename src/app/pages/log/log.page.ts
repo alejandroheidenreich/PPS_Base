@@ -76,5 +76,26 @@ export class LogPage implements OnInit {
 
   changeMode() {
     this.register = !this.register;
+    this.form.controls['email'].setValue('');
+    this.form.controls['password'].setValue('');
+    this.form.controls['password2'].setValue('');
+  }
+
+
+  logAccount1(){
+    this.register = false;
+    this.form.controls['email'].setValue('account1@test.com');
+    this.form.controls['password'].setValue('123123');
+  }
+
+  logAccount2(){
+    this.register = false;
+    this.form.controls['email'].setValue('account2@test.com');
+    this.form.controls['password'].setValue('123123');
+  }
+  logAccount3(){
+    this.register = false;
+    this.form.controls['email'].setValue('account3@test.com');
+    this.form.controls['password'].setValue('123123');
   }
 }
